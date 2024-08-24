@@ -13,9 +13,3 @@ To start the frontend:
 1. Open a new terminal
 2. Navigate to the frontend directory
 3. Run `npm start`. The frontend will start at "http://localhost:3000"
-
-### TODO
-
-* Assign file name to Uploaded files (use item ID or something)
-* Resize and square the images in the backend
-* If no cat image, then send a default image
