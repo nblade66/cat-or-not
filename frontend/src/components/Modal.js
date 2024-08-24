@@ -52,13 +52,13 @@ export default function CustomModal({ activeItem, handleChange, handleImageChang
                     </FormGroup>
                     <FormGroup>
                         <Label for="item-image">Upload Cat (or Not!)</Label>
-                        {/* {activeItem.image_url ?
+                        {activeItem.image_url ?
                         (<><div>Current Image</div>
                         <img
                             src={activeItem.image_url}
                             width="75"
                             height="auto"
-                        /></>) : (<div>No current image</div>)} */}
+                        /></>) : (<><div>No current image</div>
                         <Input
                             type="file"
                             name="image_url"
@@ -66,7 +66,7 @@ export default function CustomModal({ activeItem, handleChange, handleImageChang
                             onChange={(e) => {
                                 handleImageChange(e);
                             }}
-                        />
+                        /></>)}
                     </FormGroup>
                 </Form>
             </ModalBody>

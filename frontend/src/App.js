@@ -53,7 +53,7 @@ function App() {
     let header = { "Content-Type": "multipart/form-data" };
 
     let form_data = new FormData();
-    if (item.image_url) {
+    if (!(typeof item.image_url === "string")) {
       form_data.append("image_url", item.image_url, item.image_url.name)
     }
     form_data.append("name", item.name);
