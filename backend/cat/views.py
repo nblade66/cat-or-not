@@ -11,11 +11,10 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 class CsrfExemptSessionAuthentication(SessionAuthentication):
 
     def enforce_csrf(self, request):
-        return  # To not perform the csrf check previously happening
+        return  # To not perform the csrf check
 
 # Create your views here.
 
-# @method_decorator(csrf_exempt, name="dispatch")
 class CatView(viewsets.ModelViewSet):
     serializer_class = CatSerializer
     queryset = Item.objects.all()

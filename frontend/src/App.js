@@ -18,8 +18,6 @@ function App() {
     }
   });
 
-  console.log(appState.modal);
-
   function syncItemList() {
     axios
       .get("/api/cats/")
@@ -42,7 +40,6 @@ function App() {
   };
 
   let editItem = (item) => {
-    console.log(item);
     setState({ ...appState, activeItem: item, modal: !appState.modal });
   };
 
@@ -54,7 +51,6 @@ function App() {
     setState({ ...appState, modal: false });
 
     let header = { "Content-Type": "multipart/form-data" };
-    console.log(item);
 
     let form_data = new FormData();
     if (item.image_url) {
@@ -98,7 +94,6 @@ function App() {
   };
 
   function handleImageChange(e) {
-    console.log(e.target.files[0]);
     setState({ ...appState, activeItem: {...appState.activeItem, image_url: e.target.files[0] } });
   }
 
